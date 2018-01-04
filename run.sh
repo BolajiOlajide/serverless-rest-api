@@ -2,6 +2,14 @@
 
 set -e
 
+echo 'Is this the first time starting this application?'
+echo 'enter y for YES and n for NO'
+read response
+
+if [ "$response" == "y" ]; then
+  npm install
+fi
+
 # Create a copy of the environment variable sample and save it as .env
 cp .env.example .env
 
